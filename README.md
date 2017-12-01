@@ -11,7 +11,6 @@ A computed property is a property of which the value is set dynamically after re
 
 
 > Forked [loopback-ds-computed-mixin](https://github.com/fullcube/loopback-ds-computed-mixin) for self use by adding  fields query support to computed properties which is realized in its pull request but not been merged.
-
 > This is useful to avoid **cycle reference** from two models. 
 
 Suppose in Model named Course we have a computed property called courseDiscount which calls method **find** and triggers observer **loaded**

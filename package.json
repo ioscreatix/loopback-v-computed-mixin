@@ -1,6 +1,6 @@
 {
   "name": "loopback-v-computed-mixin",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "A mixin for the LoopBack framework that adds computed properties to a model.",
   "keywords": ["loopback", "strongloop", "mixin"],
   "license": "MIT",
