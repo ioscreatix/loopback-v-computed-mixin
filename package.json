@@ -1,0 +1,65 @@
+{
+  "name": "loopback-ds-computed-mixin",
+  "version": "0.0.0-development",
+  "description": "A mixin for the LoopBack framework that adds computed properties to a model.",
+  "keywords": [
+    "loopback",
+    "strongloop",
+    "mixin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullcube/loopback-ds-computed-mixin.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text --reporter=text-summary mocha test/*test.js",
+    "test:watch": "npm run test -- -w",
+    "pretest": "npm run lint",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "debug": "^3.0.1",
+    "depd": "^1.1.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@bubltechnology/customizable-commit-analyzer": "^1.0.2-0",
+    "bluebird": "^3.5.0",
+    "chai": "^4.1.2",
+    "condition-circle": "^1.5.0",
+    "conventional-commit-types": "^2.1.0",
+    "coveralls": "^2.13.0",
+    "eslint-config-fullcube": "^3.0.0",
+    "loopback": "^3.6.0",
+    "loopback-testing": "^1.4.0",
+    "mocha": "^3.3.0",
+    "nyc": "^11.1.0",
+    "semantic-release": "^7.0.2"
+  },
+  "config": {
+    "commitTypeMap": {
+      "feat": "minor",
+      "fix": "patch",
+      "docs": "patch",
+      "style": "patch",
+      "refactor": "patch",
+      "perf": "patch",
+      "test": "patch",
+      "build": "patch",
+      "ci": "patch",
+      "chore": "patch",
+      "revert": "patch"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types"
+    }
+  },
+  "release": {
+    "verifyConditions": "condition-circle",
+    "analyzeCommits": "@bubltechnology/customizable-commit-analyzer"
+  }
+}
