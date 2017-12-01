@@ -1,16 +1,12 @@
 {
-  "name": "loopback-ds-computed-mixin",
+  "name": "loopback-v-computed-mixin",
   "version": "0.0.0-development",
   "description": "A mixin for the LoopBack framework that adds computed properties to a model.",
-  "keywords": [
-    "loopback",
-    "strongloop",
-    "mixin"
-  ],
+  "keywords": ["loopback", "strongloop", "mixin"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fullcube/loopback-ds-computed-mixin.git"
+    "url": "https://github.com/vanceeasleaf/loopback-v-computed-mixin.git"
   },
   "scripts": {
     "lint": "eslint .",
